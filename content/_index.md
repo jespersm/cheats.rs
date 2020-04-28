@@ -90,6 +90,7 @@ template = "index.html"
 
 **Misc**
 * [Links & Services](#links-services)
+* [Editors' Picks](#editors-picks)
 * [Printing & PDF](#printing-pdf)
 
 
@@ -3038,6 +3039,65 @@ Online services which provide information or tooling.
 </div>
 
 {{ tablesep() }}
+
+
+
+
+## Editors' Picks
+
+<div class="tabs">
+
+<!-- NEW TAB -->
+<div class="tab">
+<input class="tab-radio" type="radio" id="tab-authorspick-1" name="tab-authorspick" checked>
+<label class="tab-label" for="tab-authorspick-1">Disclaimer</label>
+<div class="tab-panel">
+<div class="tab-content stringconversion">
+
+While the rest tries to focus on language essentials or universal guides, this section lists some personal favorites.
+
+Anything in here is totally subjective and might change without notice. Most people shouldn't even bother to read this :)
+
+</div></div></div>
+
+
+<!-- NEW TAB -->
+<div class="tab">
+<input class="tab-radio" type="radio" id="tab-authorspick-2" name="tab-authorspick">
+<label class="tab-label" for="tab-authorspick-2">Tools</label>
+<div class="tab-panel">
+<div class="tab-content stringconversion">
+
+Disclaimer
+
+</div></div></div>
+
+
+<!-- NEW TAB -->
+<div class="tab">
+<input class="tab-radio" type="radio" id="tab-authorspick-3" name="tab-authorspick">
+<label class="tab-label" for="tab-authorspick-3">IDE Plugins</label>
+<div class="tab-panel">
+<div class="tab-content stringconversion">
+
+Disclaimer
+
+</div></div></div>
+
+
+<!-- NEW TAB -->
+<div class="tab">
+<input class="tab-radio" type="radio" id="tab-authorspick-4" name="tab-authorspick">
+<label class="tab-label" for="tab-authorspick-4">Key Bindings</label>
+<div class="tab-panel">
+<div class="tab-content stringconversion">
+
+Disclaimer
+
+</div></div></div>
+
+
+</div>
 
 
 ## Printing & PDF
