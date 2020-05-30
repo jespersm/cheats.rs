@@ -48,7 +48,7 @@ We use the following model:
 **In detail**, this cheat sheet ("work") consists of:
 
 - text (tables, guides, Rust snippets) addressing language-related content viewable on [cheats.rs](https://cheats.rs) ("content")
-- code (HTML + CSS; _not_ Rust code), logos, graphics, assets and the resulting presentation ("supporting assets")
+- code (HTML, CSS, Markdown; _not_ Rust code), logos, graphics, assets and the resulting presentation ("supporting assets")
 - metadata, such as the real names of contributors (e.g., on Github or the site), information from the Git repo, any other information not directly related to end-user content ... ("metadata")
 
 The **content** of this work is licensed as CC0 from the European Union, with contributions from all over the world.

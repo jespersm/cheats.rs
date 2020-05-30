@@ -3019,6 +3019,7 @@ Comprehensive lookup tables for common components.
 | [ALL the Clippy Lints](https://rust-lang.github.io/rust-clippy/master/) | All the [**clippy**](https://github.com/rust-lang/rust-clippy) lints you might be interested in. |
 | [Configuring Rustfmt](https://rust-lang.github.io/rustfmt/) | All [**rustfmt**](https://github.com/rust-lang/rustfmt) options you can use in `.rustfmt.toml`. |
 | [Compiler Error Index](https://doc.rust-lang.org/error-index.html) | Ever wondered what `E0404` means? |
+
 </div>
 
 {{ tablesep() }}
@@ -3045,18 +3046,33 @@ Online services which provide information or tooling.
 
 ## Editors' Picks
 
-<div class="tabs">
+
+<div class="tabs header-editorspicks">
+
+<!-- NEW TAB -->
+<div class="tab">
+<input class="tab-radio" type="radio" id="tab-authorspick-0" name="tab-authorspick" checked>
+<label class="tab-label" for="tab-authorspick-0">Disclaimer</label>
+<div class="tab-panel">
+<div class="tab-content">
+
+While the other sections focus on universal resources, this section lists some personal favorites. Highly subjective :)
+
+
+</div></div></div>
+
+
 
 <!-- NEW TAB -->
 <div class="tab">
 <input class="tab-radio" type="radio" id="tab-authorspick-1" name="tab-authorspick" checked>
-<label class="tab-label" for="tab-authorspick-1">Disclaimer</label>
+<label class="tab-label" for="tab-authorspick-1">Web Sites</label>
 <div class="tab-panel">
-<div class="tab-content stringconversion">
+<div class="tab-content">
 
-While the rest tries to focus on language essentials or universal guides, this section lists some personal favorites.
-
-Anything in here is totally subjective and might change without notice. Most people shouldn't even bother to read this :)
+| Tools | Description |
+|--------| -----------|
+| [This Week in Rust](https://this-week-in-rust.org) | Weekly aggregation of what happened in Rust ecosystem + compiler. |
 
 </div></div></div>
 
@@ -3064,11 +3080,29 @@ Anything in here is totally subjective and might change without notice. Most peo
 <!-- NEW TAB -->
 <div class="tab">
 <input class="tab-radio" type="radio" id="tab-authorspick-2" name="tab-authorspick">
-<label class="tab-label" for="tab-authorspick-2">Tools</label>
+<label class="tab-label" for="tab-authorspick-2">IDE</label>
 <div class="tab-panel">
-<div class="tab-content stringconversion">
+<div class="tab-content">
 
-Disclaimer
+| Tools | Description |
+|--------| -----------|
+| [CLion](https://www.jetbrains.com/clion/) | Excellent refactoring, dysfunctional debugging, still best Rust IDE if on the clock. |
+| {{ tab() }} [IntelliJ Rust](https://intellij-rust.github.io/) | This is the **plugin needed for Rust**. |
+| {{ tab() }} CodeGlance | Clickable minimap we're all used to since Sublime. |
+| {{ tab() }} Rainbow Brackets | Extremely helpful with all these closures ... |
+| {{ tab() }} GoToTabs | Because I really, really want to CTRL-1, ... to switch tabs. |
+| {{ tab() }} Nyan Progress Bar | The default progress bar is sometimes hard to see. |
+| [Superluminal](https://superluminal.eu/) | Stellar profiler on Windows that speaks Rust. |
+
+
+{{ tablesep() }}
+
+
+| Fonts | Description |
+|--------| -----------|
+| [JetBrains Mono](https://www.jetbrains.com/lp/mono/) | Typeface for developers with awesome ligatures. |
+| [Fira Code](https://github.com/tonsky/FiraCode/) | Another great typeface with ligatures, previous favorite. |
+
 
 </div></div></div>
 
@@ -3076,9 +3110,9 @@ Disclaimer
 <!-- NEW TAB -->
 <div class="tab">
 <input class="tab-radio" type="radio" id="tab-authorspick-3" name="tab-authorspick">
-<label class="tab-label" for="tab-authorspick-3">IDE Plugins</label>
+<label class="tab-label" for="tab-authorspick-3">Tools</label>
 <div class="tab-panel">
-<div class="tab-content stringconversion">
+<div class="tab-content">
 
 Disclaimer
 
@@ -3090,12 +3124,11 @@ Disclaimer
 <input class="tab-radio" type="radio" id="tab-authorspick-4" name="tab-authorspick">
 <label class="tab-label" for="tab-authorspick-4">Key Bindings</label>
 <div class="tab-panel">
-<div class="tab-content stringconversion">
+<div class="tab-content">
 
 Disclaimer
 
 </div></div></div>
-
 
 </div>
 
@@ -3104,6 +3137,8 @@ Disclaimer
 
 > Want this Rust cheat sheet as a PDF download? <a href="javascript:window.print()"><b>Generate PDF</b></a> (or select File > Print – might take 10s so) and then "Save as PDF". It looks great in both Firefox's and Chrome's PDF exports. Alternatively use the <a href="https://github.com/ralfbiedert/cheats.rs/releases/download/2020-02-08/rust_cheat_sheet.pdf"><b>cached PDF</b></a>.
 
+
+<!-- Ending no-print -->
 </div>
 
 <footer>
