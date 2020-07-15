@@ -92,6 +92,41 @@ function set_survey(state) {
     !!localStorage && localStorage.setItem(survey_key, state);
 }
 
+// Checks if an element is in the viewport, returns upper position or false if not.
+function element_in_viewport(element) {
+    let rect = element.getBoundingClientRect();
+
+    let visible  = rect.top >= 0 &&
+                   rect.left >= 0 &&
+                   rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                   rect.right <= (window.innerWidth || document.documentElement.clientWidth);
+
+    if (visible) {
+        return rect.top;
+    } else {
+        return undefined;
+    }
+}
+
+// Out of a set of elements, returns (position, higest_visible).
+function highest_visible(elements) {
+    let best = [999999, undefined];
+
+    for (var heading of elements) {
+        let pos = element_in_viewport(heading);
+
+        // Store if better and no old set
+        if (pos !== undefined && (best[1] === undefined || pos < best[1])) {
+            best = [pos, heading.id];
+        }
+    }
+
+    if (best[1] === undefined) {
+        return undefined
+    } else {
+        return best
+    }
+}
 
 // Called when the user clicks the subtitle (usually the date)
 function toggle_subtitle() {
@@ -116,6 +151,48 @@ try {
     if (iOS) {
         let button = document.getElementById("toggle_ligatures");
         button.style.visibility = "hidden";
+    }
+
+    // All targets we might offer as bookmarks
+    let h2s = document.getElementsByTagName("h2");
+    let h3s = document.getElementsByTagName("h3");
+
+    if (!!window.history && !!window.history.replaceState) {
+        // Cache scroll position and only act if we changed
+        let last_scroll_position = 0;
+
+        // Make sure we update the #xxx part of our URL based on what's visible. We use setInterval
+        // since onscroll had terrible performance if people actually scrolled.
+        window.setInterval((e) => {
+            // Make sure we actually moved ...
+            let current_scrolled_position = window.pageYOffset || document.documentElement.scrollTop;
+            if (current_scrolled_position == last_scroll_position) return;
+            last_scroll_position = current_scrolled_position;
+
+            let target = undefined;
+
+            // Fast path if start of page
+            if (current_scrolled_position < 100) {
+                target = "";
+            } else {
+                // If now, compute new target.
+                let best = (99999, undefined);
+
+                let best_h2 = highest_visible(h2s);
+                let best_h3 = highest_visible(h3s);
+
+                // Find the actually higest one.
+                if (best_h2 === undefined && best_h3 === undefined) return;
+                if (best_h2 === undefined && best_h3 !== undefined) target = best_h3[1];
+                if (best_h2 !== undefined && best_h3 === undefined) target = best_h2[1];
+                if (best_h2 !== undefined && best_h3 !== undefined) target = best_h2[0] < best_h3[0] ? best_h2[1] : best_h3[1];
+
+            }
+
+            if (target !== undefined) {
+                window.history.replaceState({}, "", "#" + target);
+            }
+        }, 500);
     }
 
     let night_mode = !!localStorage && localStorage.getItem("night-mode");
