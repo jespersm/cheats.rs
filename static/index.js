@@ -37,6 +37,21 @@ function show_playground(state) {
 }
 
 // Called by toggle button, enable or disable night mode and persist setting in localStorage.
+function toggle_legend_ext() {
+    let ext = document.getElementById("legendext");
+    let ctrl = document.getElementById("legendcontrols");
+
+    if (!ext.style.display || ext.style.display == "none") {
+        ext.style.display = "inline";
+        ctrl.innerHTML = "x"
+    } else {
+        ext.style.display = "none";
+        ctrl.innerHTML = "+"
+    }
+}
+
+
+// Called by toggle button, enable or disable night mode and persist setting in localStorage.
 function toggle_night_mode() {
     let body = document.getElementsByTagName("body")[0];
     if (body.classList.contains("night-mode")) {

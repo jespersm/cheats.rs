@@ -11,6 +11,8 @@ template = "index.html"
 
 
 
+<div id="legend">
+
 > Contains clickable links to
 > **The Book** {{ book(page="") }},
 > **Rust by Example** {{ ex(page="") }},
@@ -22,6 +24,20 @@ template = "index.html"
 > has a **minimum edition** {{ edition(ed="'18") }},
 > is **work in progress** {{ experimental() }},
 > or **bad** {{ bad() }}.
+>
+> <span id="legendext">
+>
+> Furthermore,
+> needs **better link** {{ todo() }},
+> see **below** {{ below(target="") }} ,
+> see **above** {{ above(target="") }} ,
+> shorthand **external link** {{ link(url="#") }}.
+>
+> </span>
+>
+> <a id="legendcontrols" href="javascript:toggle_legend_ext();">+</a>
+
+</div>
 
 <div class="controls">
     <a id="toggle_ligatures" href="javascript:toggle_ligatures()">Fira Code Ligatures (<code>..=, =></code>)</a>
